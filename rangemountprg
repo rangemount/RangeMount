@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to Range Mount</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Vibrant Green */
+            --secondary-color: #FF5722; /* Bright Orange */
+            --accent-color: #00BCD4; /* Aqua Blue */
+            --dark-bg: #0F172A;
+            --light-bg: #F8FAFC;
+            --text-color: #1E293B;
+            --font-primary: 'Inter', sans-serif;
+            --font-secondary: 'Poppins', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-primary);
+            background-color: var(--light-bg);
+            color: var(--text-color);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            animation: fadeInDown 1.2s ease-out forwards;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        header .cta-button {
+            background-color: white;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeInUp 2s ease-out forwards;
+        }
+
+        header .cta-button:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            font-family: var(--font-secondary);
+            color: var(--primary-color);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, var(--light-bg), var(--accent-color));
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            z-index: 0;
+            animation: spin 10s linear infinite;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+            color: var(--dark-bg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer {
+            background-color: var(--dark-bg);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Creative Agency</h1>
+        <p>Innovative Solutions for Your Digital Success</p>
+        <button class="cta-button" onclick="window.location.href='mailto:1rangemount@gmail.com'">Get Started</button>
+    </header>
+
+    <section>
+        <h2 class="section-title">Our Services</h2>
+        <div class="services">
+            <div class="service-card" data-aos="fade-up">
+                <h3>SEO Services</h3>
+                <p>Boost your website's visibility on search engines with expert optimization strategies.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>Video Editing</h3>
+                <p>Transform raw footage into cinematic experiences that captivate and inspire.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Marketing Campaigns</h3>
+                <p>Design and execute innovative campaigns to elevate your brand and engage audiences.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <h3>Video Translation</h3>
+                <p>Bridge language gaps and reach global audiences with localized video content.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <h3>AI Chatbots</h3>
+                <p>Implement smart chatbots that provide 24/7 customer support and enhance user experience.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                <h3>AI Agents</h3>
+                <p>Deploy advanced AI agents for personalized, efficient, and seamless customer interactions.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Creative Agency. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true
+        });
+    </script>
+</body>
+</html>
